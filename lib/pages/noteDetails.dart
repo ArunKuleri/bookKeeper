@@ -2,22 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:notekeeper/pages/notes.dart';
 
 class NoteDetails extends StatefulWidget {
+  String appBarTitle;
+  NoteDetails(this.appBarTitle);
   @override
   State<StatefulWidget> createState() {
-    return NoteDetailsState();
+    return NoteDetailsState(this.appBarTitle);
   }
 }
 
 class NoteDetailsState extends State<NoteDetails> {
   static var _priorities = ["High", "Low"];
+  String appBarTitle;
   TextEditingController titleController = TextEditingController();
   TextEditingController descriptionController = TextEditingController();
+  NoteDetailsState(this.appBarTitle);
   @override
   Widget build(BuildContext context) {
     TextStyle? textStyle = Theme.of(context).textTheme.headline6;
     return Scaffold(
       appBar: AppBar(
-        title: Text("Edit Note"),
+        title: Text(appBarTitle),
       ),
       body: Padding(
         padding: EdgeInsets.only(top: 15.0, left: 10.0, right: 10.0),
