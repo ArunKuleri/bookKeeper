@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # notekeeper
 
 A new Flutter project.
@@ -14,3 +15,6 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+=======
+# bookKeeper is just a small to do list app using Sqflite  and fluter 
+>>>>>>> 6dace3977fddb802ac016de5a2b43c3251c2b019
