@@ -1,11 +1,11 @@
 import 'package:flutter/scheduler.dart';
 
 class Note {
-  int _id;
-  String _title;
-  String _description;
-  String _date;
-  int _priority;
+  int _id = "" as int;
+  String _title = " ";
+  String _description = "";
+  String _date = "";
+  int _priority = "" as int;
 
   Note(this._id, this._title, this._date, this._priority, this._description);
   Note.withId(
@@ -48,5 +48,13 @@ class Note {
     map['priority'] = _priority;
     map["date"] = _date;
     return map;
+  }
+
+  Note.fromMapObject(Map<String, dynamic> map) {
+    this._id = map['id'];
+    this._title = map['title'];
+    this._description = map['description'];
+    this._priority = map['priority'];
+    this._date = map['date'];
   }
 }
